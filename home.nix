@@ -16,6 +16,7 @@ in
     jq        # json on the command line
     lazygit
     neovim
+    tectonic  # self-contained LaTeX engine; compiles .tex to PDF, fetches packages on demand
     # the font everything renders in
     nerd-fonts.hack
   ];

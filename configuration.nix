@@ -34,12 +34,27 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    taps = [
+      "nikitabobko/tap"  # provides the aerospace cask (not in homebrew-core/cask)
+    ];
     brews = [
       "herdr"
+      "fresh-editor"
+      "glow"
+      "gh"
+      "poppler"
+      "pandoc"
+      "mysql"
+      "tmux"
+      "tree"
     ];
     casks = [
       "wezterm"
       "claude-code"
+      "codex"
+      "aerospace"
+      "font-jetbrains-mono-nerd-font"
+      "kde-connect"
     ];
   };
 }
