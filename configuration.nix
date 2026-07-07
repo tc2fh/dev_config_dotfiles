@@ -39,6 +39,8 @@
     ];
     brews = [
       "herdr"
+      "uv"
+      "pixi"
       "fresh-editor"
       "glow"
       "gh"
@@ -49,6 +51,7 @@
       "tree"
     ];
     casks = [
+      "firefox"
       "wezterm"
       "claude-code"
       "codex"
