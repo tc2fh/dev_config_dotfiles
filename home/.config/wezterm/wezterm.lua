@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 
 -- Appearance
 config.font = wezterm.font 'Hack Nerd Font'
-config.font_size = 13.0
+config.font_size = 20.0
 
 -- Fetch the built-in Terminix Dark (Gogh) palette
 local terminix_colors = wezterm.color.get_builtin_schemes()['Terminix Dark (Gogh)']
@@ -21,6 +21,7 @@ config.color_schemes = {
 
 -- Actually use the custom scheme
 config.color_scheme = 'Terminix Dark (High Contrast)'
+-- config.color_scheme = 'rose-pine-moon'
 
 -- Transparency
 -- 0.82 is more readable cross-platform; use 0.70 if you want the very transparent look.
@@ -96,16 +97,16 @@ config.keys = {
   },
 
   -- Move between panes
-  { key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-  { key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
-  { key = 'UpArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-  { key = 'DownArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
+  { key = 'h', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Left' },
+  { key = 'l', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Right' },
+  { key = 'k', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Up' },
+  { key = 'j', mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection 'Down' },
 
   -- Resize panes
-  { key = 'LeftArrow', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Left', 5 } },
-  { key = 'RightArrow', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Right', 5 } },
-  { key = 'UpArrow', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
-  { key = 'DownArrow', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Down', 5 } },
+  { key = 'h', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Left', 5 } },
+  { key = 'l', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Right', 5 } },
+  { key = 'k', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
+  { key = 'j', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Down', 5 } },
 
   -- Zoom/unzoom current pane
   { key = 'z', mods = 'CTRL|SHIFT', action = act.TogglePaneZoomState },
